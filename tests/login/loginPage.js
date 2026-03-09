@@ -19,6 +19,7 @@ const verficarLogin = async (page) => {
 const logarEmailVazio = async (page) => {
     await page.locator('#password').click();
     await page.locator('#password').fill('123456');
+    await page.getByRole('button', { name: 'login' }).click();
 }
 
 const logarSenhaVazia = async (page) => {
